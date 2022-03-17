@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="KINH NGHIỆM THI"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:text="- Đầu tiên bạn dừng xe trước vạch xuất phát và chờ hiệu lệnh bắt đầu bài thi. Khi vào trong sa hình vòng số 8 thì lưu ý điều khiển bánh trước chạy áp sát mép ngoài của vòng số 8 khoảng 5 đến 10 cm để đảm bảo cho bánh sau được nằm gọn trong vòng số 8. Làm như vậy khi bạn ôm cua bánh xe không bị trượt ra ngoài vòng.\n\n- Khi ôm cua hãy giữ vững tay lái, loạng choạng hay lắc lư tay lái rất dễ dẫn đến việc bị mất điều khiển xe và việc cán vạch là điều rất khó tránh khỏi.\n\n- Giữa số 2 và số 3, số nào ổn định nhất thì bạn đi. Đừng đi số 1 vì máy sẽ rất bốc dẫn đến việc lỡ tay quá ga xe sẽ lao ngay khỏi vòng. Với số 4, máy sẽ quá yếu cho nên khi đi qua khúc cua, xe sẽ không đủ tốc độ làm chết máy và bạn sẽ phải chống trân.\n\n- Hãy chú ý để chạy đúng hướng vòng số 8 và chạy đủ 1,5 vòng. Có rất nhiều trường hợp bị trượt do chỉ chạy được nửa vòng đầu rồi sau đó chạy nhầm hướng. Nhiều trường hợp chưa chạy đủ vòng đã vào lối cho bài thi số 2.\n\n- Nếu các bạn không tập trung được để nhìn hình thì hãy nhớ trong đầu là khi đến cửa thi vòng số 8 thì chạy theo chiều sau: rẽ phải -> rẽ trái -> rẽ phải -> rẽ trái -> rẽ phải. Chạy đủ 5 bước rẽ này là kết thúc bài thi vòng số 8 với đủ số lượng 1,5 vòng. Ở lần rẽ cuối cùng, bạn sẽ đến với bài thi số 2.\n\n"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

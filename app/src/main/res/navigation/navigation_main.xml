@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.giangle.project.ui.home_screen.HomeFragment"
+        android:label="Bằng lái xe">
+        <action
+            android:id="@+id/action_homeFragment_to_trafficSignFragment"
+            app:destination="@id/trafficSignFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_tipFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:destination="@id/tipFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_practiceQuestionsFragment"
+            app:destination="@id/practiceQuestionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseContestFragment"
+            app:destination="@id/chooseContestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafficSignFragment"
+        android:name="com.giangle.project.ui.traffic_signs.TrafficSignFragment"
+        android:label="Biển báo" />
+    <fragment
+        android:id="@+id/tipFragment"
+        android:name="com.giangle.project.ui.tips.TipFragment"
+        android:label="Mẹo thi" />
+    <fragment
+        android:id="@+id/a1A2ExamExperienceFragment"
+        android:name="com.giangle.project.ui.tips.practice_tips.A1A2ExamExperienceFragment"
+        android:label="Kinh nghiệm thực hành A1,A2" />
+    <fragment
+        android:id="@+id/b1B2ExamExperienceFragment"
+        android:name="com.giangle.project.ui.tips.practice_tips.B1B2ExamExperienceFragment"
+        android:label="Kinh nghiệm thực hành B1,B2" />
+    <action
+        android:id="@+id/action_global_a1A2ExamExperienceFragment"
+        app:destination="@id/a1A2ExamExperienceFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_global_b1B2ExamExperienceFragment"
+        app:destination="@id/b1B2ExamExperienceFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <fragment
+        android:id="@+id/practiceQuestionsFragment"
+        android:name="com.giangle.project.ui.practice_questions.PracticeQuestionsFragment"
+        android:label="{fragmentLabel}">
+        <argument
+            android:name="typeOfContest"
+            app:argType="string" />
+        <argument
+            android:name="fragmentLabel"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseContestFragment"
+        android:name="com.giangle.project.ui.choose_contest.ChooseContestFragment"
+        android:label="{fragmentLabel}">
+        <argument
+            android:name="typeOfContest"
+            app:argType="string" />
+        <argument
+            android:name="fragmentLabel"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_chooseContestFragment_to_doContestFragment"
+            app:destination="@id/doContestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_chooseContestFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/doContestFragment"
+        android:name="com.giangle.project.ui.do_contest.DoContestFragment"
+        android:label="{fragmentLabel}">
+        <argument
+            android:name="typeOfContest"
+            app:argType="string" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="fragmentLabel"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.giangle.project.ui.history.HistoryFragment"
+        android:label="Lịch sử đề thi"
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment_to_detailContestFragment"
+            app:destination="@id/detailContestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailContestFragment"
+        android:name="com.giangle.project.ui.history.DetailContestFragment"
+        android:label="{fragmentLabel}"
+        tools:layout="@layout/fragment_detail_contest">
+        <argument
+            android:name="idType"
+            app:argType="string" />
+        <argument
+            android:name="typeOfContest"
+            app:argType="string" />
+        <argument
+            android:name="fragmentLabel"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

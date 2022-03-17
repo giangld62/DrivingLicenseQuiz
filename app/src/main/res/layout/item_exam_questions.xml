@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="question"
+            type="com.giangle.project.db.entity.Question" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@drawable/round_header_question_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <TextView
+                android:id="@+id/tv_question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Câu 1"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Bien nao xe duoc phep quay dau nhung khong duoc phep re trai"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_question_image"
+                android:layout_width="350dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/meo_ghi_nho" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_all_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_question">
+
+            <RadioButton
+                android:id="@+id/rb_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_white_corner_16_border_gray"
+                android:padding="4dp"
+                android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_white_corner_16_border_gray"
+                android:padding="4dp"
+                android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_white_corner_16_border_gray"
+                android:padding="4dp"
+                android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_white_corner_16_border_gray"
+                android:padding="4dp"
+                android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/rl_answer"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="#F4F2DA"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/rg_all_answer">
+
+            <TextView
+                android:id="@+id/tv_right_answer"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_answer"
+                android:gravity="center"
+                android:text="Dap an: 2"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

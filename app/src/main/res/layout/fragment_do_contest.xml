@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_question_status"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_current_question"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_number_question"
+            android:gravity="center"
+            android:text="Câu 1/25"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_button_submit"
+            android:gravity="center"
+            android:text="Nộp bài"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_question"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom_navigation"
+        app:layout_constraintTop_toBottomOf="@id/rl_question_status" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:background="@color/statusBarColor"
+            android:text="Trước"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/statusBarColor"
+            android:text="Sau"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

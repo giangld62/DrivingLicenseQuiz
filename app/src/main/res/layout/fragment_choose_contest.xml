@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/iv_cau_diem_liet"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/make_quizz_background"
+            android:gravity="center"
+            android:text="Câu hỏi điểm liệt"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/iv_random_question"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/make_quizz_background"
+            android:gravity="center"
+            android:text="Câu hỏi ngẫu nhiên"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="Các bộ câu hỏi cố định"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_choose_contest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+

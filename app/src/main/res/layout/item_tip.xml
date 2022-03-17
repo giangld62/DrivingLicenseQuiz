@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="com.giangle.project.db.entity.Tip" />
+    </data>
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="5dp">
+        <TextView
+            app:set_text="@{data.noiDung}"
+            android:id="@+id/tv_tip_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung mẹo"
+            android:textSize="18sp"/>
+    </androidx.cardview.widget.CardView>
+</layout>

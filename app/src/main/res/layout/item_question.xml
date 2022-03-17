@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="data"
+            type="com.giangle.project.db.entity.Question" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@drawable/round_header_question_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <TextView
+                android:id="@+id/tv_question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Câu 1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Bien nao xe duoc phep quay dau nhung khong duoc phep re trai"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:set_text="@{data.cauHoi}" />
+
+            <ImageView
+                android:id="@+id/iv_question_image"
+                android:layout_width="350dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                app:bitmap="@{data.bienBao}"
+                app:havePicture="@{data.anh}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_all_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_question">
+
+            <LinearLayout
+                android:id="@+id/ll_answer_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_answer_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:setTitle="@{@string/answer_1}"
+                    app:setValue="@{data.a}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="#F2F2F2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_answer_b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_answer_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:setTitle="@{@string/answer_2}"
+                    app:setValue="@{data.b}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="#F2F2F2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_answer_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_answer_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:setTitle="@{@string/answer_3}"
+                    app:setValue="@{data.c}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="#F2F2F2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_answer_d"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_answer_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="1. - La su thieu hieu biet va chap hanh nghiem chinh phap luat ve giao thong, la y thuc trach nhiem voi cong dong khi tham gia giao thong"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:setTitle="@{@string/answer_4}"
+                    app:setValue="@{data.d}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="#F2F2F2" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="#F4F2DA"
+            app:layout_constraintTop_toBottomOf="@id/ll_all_answer">
+
+            <TextView
+                android:id="@+id/tv_right_answer"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_answer"
+                android:gravity="center"
+                android:text="Dap an: 2"
+                android:textColor="@color/white"
+                app:setTitle="@{@string/answer}"
+                app:setValue="@{data.dapAnDung}" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

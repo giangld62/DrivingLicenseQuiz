@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home_screen.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingBottom="8dp"
+            android:id="@+id/ll_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ui.home_screen.HomeActivity">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager_title"
+                android:layout_width="match_parent"
+                android:layout_height="210dp" />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:layout_marginTop="4dp"
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:ci_drawable="@drawable/bg_indicator" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/imb_traffic_signs"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bien_bao"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_traffic_signs"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/trafficSigns"
+                    android:textAlignment="center"
+                    android:textColor="#111"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_traffic_signs" />
+
+                <ImageButton
+                    android:id="@+id/imb_make_quiz"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thi_sat_hach"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_make_quiz"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/makeQuiz"
+                    android:textAlignment="center"
+                    android:textColor="#111"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_traffic_signs" />
+
+                <ImageButton
+                    android:id="@+id/imb_questions"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cau_hoi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_traffic_signs" />
+
+                <TextView
+                    android:id="@+id/tv_questions"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/theory"
+                    android:textAlignment="center"
+                    android:textColor="#111"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_questions" />
+
+                <ImageButton
+                    android:id="@+id/imb_tips"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meo_ghi_nho"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_make_quiz" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/tips"
+                    android:textAlignment="center"
+                    android:textColor="#111"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_tips" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
